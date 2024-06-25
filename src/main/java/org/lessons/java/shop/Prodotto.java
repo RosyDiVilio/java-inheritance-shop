@@ -4,19 +4,19 @@ import java.util.Random;
 
 public class Prodotto {
 	
-	protected static int codice;
-	protected static String nome;
-	protected static String marca;
-	protected static float prezzo;
-	protected static float iva;
+	protected int codice;
+	protected String nome;
+	protected String marca;
+	protected int prezzo;
+	protected float iva;
 	
 	public Prodotto(int codice, String nome, String marca, float prezzo, float iva) {
 		
-		this.setCodice(codice);
-		this.setNome(nome);
-		this.setMarca(marca);
-		this.setPrezzo(prezzo);
-		this.setIva(iva);
+		//this.codice;
+		//this.nome;
+		//this.marca;
+		//this.prezzo;
+		//this.iva;
 	}
 
 	public int getCodice() {
@@ -46,11 +46,11 @@ public class Prodotto {
 		this.marca = marca;
 	}
 
-	public float getPrezzo() {
+	public int getPrezzo() {
 		return prezzo;
 	}
 
-	public void setPrezzo(float prezzo) {
+	public void setPrezzo(int prezzo) {
 		this.prezzo = prezzo;
 	}
 
@@ -62,7 +62,7 @@ public class Prodotto {
 		this.iva = 5;
 	}
 	
-	public static void shop() {
+	public void shop() {
 		System.out.println("Elenco dettagli del prodotto ->");
 		System.out.println("Codice: " + codice);
 		System.out.println("Nome: " + nome);
