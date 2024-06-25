@@ -8,7 +8,7 @@ public class Prodotto {
 	protected String nome;
 	protected String marca;
 	protected int prezzo;
-	protected float iva;
+	protected int iva;
 	
 	public Prodotto(int codice, String nome, String marca, float prezzo, float iva) {
 		
@@ -58,7 +58,7 @@ public class Prodotto {
 		return iva;
 	}
 
-	public void setIva(float iva) {
+	public void setIva(int iva) {
 		this.iva = 5;
 	}
 	

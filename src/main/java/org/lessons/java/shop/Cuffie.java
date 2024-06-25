@@ -6,7 +6,7 @@ public class Cuffie extends Prodotto{
 	protected boolean wireless;
 	protected boolean cablate;
 	
-	public Cuffie(int codice, String nome, String marca, float prezzo, float iva, String colore, boolean wireless, boolean cablate) {
+	public Cuffie(int codice, String nome, String marca, int prezzo, int iva, String colore, boolean wireless, boolean cablate) {
 		super(codice, nome, marca, prezzo, iva);
 		this.colore = colore;
 		this.wireless = wireless;
@@ -34,7 +34,7 @@ public class Cuffie extends Prodotto{
 		return this.cablate;
 	}
 	
-	public void setCablate(boolean wireless) {
+	public void setCablate(boolean cablate) {
 		this.cablate = cablate;
 	}
 	
