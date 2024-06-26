@@ -42,7 +42,11 @@ public class Cuffie extends Prodotto{
 		System.out.println("Colore: " + colore);
 		System.out.println("Wireless: " + wireless);
 		System.out.println("Cablate: " + cablate);
-		
+	}
+	
+	@Override
+	public String toString() {
+		return super.toString() + "Colore cuffie: " + this.colore + "Wireless: " + this.wireless + "Cablate: " + this.cablate;
 	}
 
 }

@@ -1,21 +1,14 @@
 package org.lessons.java.shop;
 
-import java.util.Random;
-
 public class Smartphone extends Prodotto{
 	
 	protected int codiceIMEI;
 	protected int memoria;
 	
-	public Smartphone(int codice, String nome, String marca, int prezzo, int iva,int codiceIMEI, int memoria) {
+	public Smartphone(int codice, String nome, String marca, int prezzo, int iva, int codiceIMEI, int memoria) {
 		super(codice, nome, marca, prezzo, iva);
 		this.codiceIMEI = codiceIMEI;
 		this.memoria = memoria;
-		
-		Random randomImei = new Random();
-		int numeroImei = randomImei.nextInt(999999999);
-		codiceIMEI = numeroImei;
-		this.codiceIMEI = codiceIMEI;
 	}
 		
 		public int getCodiceImei() {
@@ -38,7 +31,11 @@ public class Smartphone extends Prodotto{
 		public void shop() {
 			System.out.println("Codice IMEI: " + codiceIMEI);
 			System.out.println("Memoria: GB" + memoria);
-			
+		}
+		
+		@Override
+		public String toString() {
+			return super.toString() + "Codice IMEI: " + this.codiceIMEI + "Memoria: " + this.memoria;
 		}
 	}
 

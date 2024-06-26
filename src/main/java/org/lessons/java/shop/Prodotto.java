@@ -1,7 +1,5 @@
 package org.lessons.java.shop;
 
-import java.util.Random;
-
 public class Prodotto {
 	
 	protected int codice;
@@ -10,13 +8,13 @@ public class Prodotto {
 	protected int prezzo;
 	protected int iva;
 	
-	public Prodotto(int codice, String nome, String marca, float prezzo, float iva) {
+	public Prodotto(int codice, String nome, String marca, int prezzo, int iva) {
 		
-		//this.codice;
-		//this.nome;
-		//this.marca;
-		//this.prezzo;
-		//this.iva;
+		this.codice = codice;
+		this.nome = nome;
+		this.marca = marca;
+		this.prezzo = prezzo;
+		this.iva = iva;
 	}
 
 	public int getCodice() {
@@ -24,9 +22,6 @@ public class Prodotto {
 	}
 
 	public void setCodice(int codice) {
-		Random random = new Random();
-		int numero = random.nextInt(999999);
-		codice = numero;
 		this.codice = codice;
 	}
 
@@ -62,13 +57,10 @@ public class Prodotto {
 		this.iva = 5;
 	}
 	
-	public void shop() {
-		System.out.println("Elenco dettagli del prodotto ->");
-		System.out.println("Codice: " + codice);
-		System.out.println("Nome: " + nome);
-		System.out.println("Marca: " + marca);
-		System.out.println("Prezzo: €" + prezzo);
-		System.out.println("Iva: %" + iva);
+	@Override
+	public String toSring() {
+		return "Codice: " + this.codice + "Nome: " + this.nome + "Marca: " + this.marca + "Prezzo: " + this.prezzo + "IVA: " + this.iva;
 	}
 
 }
+
